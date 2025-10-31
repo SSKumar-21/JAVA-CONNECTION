@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.Scanner;
+import java.lang.*;
 
 class UserInput {
      public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -16,8 +17,7 @@ class UserInput {
         System.out.print("Enter Student ID (int): ");
         int id = sc.nextInt();
 
-        sc.nextLine(); // consume newline
-
+        sc.nextLine();
         System.out.print("Enter Student Name: ");
         String name = sc.nextLine();
 
@@ -25,7 +25,7 @@ class UserInput {
         String branch = sc.nextLine();
 
         // Use PreparedStatement for inserting data
-        String insertSQL = "INSERT INTO STUDENT (ID, NAME, BRANCH) VALUES (?, ?, ?)";
+        String insertSQL = "INSERT INTO STUDENT (ID, NAME, BRANCH) VALUES ("+id+","+name+","+branch+")";
         PreparedStatement pst = con.prepareStatement(insertSQL);
 
         // Set parameters safely
@@ -48,9 +48,7 @@ class UserInput {
 
         System.out.println("\n--- STUDENT TABLE ---");
         while (rs.next()) {
-            System.out.println(rs.getInt("ID") + "\t" +
-                               rs.getString("NAME") + "\t" +
-                               rs.getString("BRANCH"));
+            System.out.println(rs.getInt("ID") + "\t" + rs.getString("NAME") + "\t" +rs.getString("BRANCH"));
         }
 
         // Close resources
