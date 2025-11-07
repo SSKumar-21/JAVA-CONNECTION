@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.Scanner;
 
-class UserInput {
+class emp {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Scanner sc = new Scanner(System.in);
 
