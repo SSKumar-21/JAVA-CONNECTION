@@ -1,0 +1,49 @@
+20 Feb 2026:
+
+Java:
+
+*************************************************
+INSTALLATION AND PROJECT MAKING   
+
+1. Install Eclipse and open
+2. make the new project: 
+give Name, set to jdk 22, (optional choose the root file or the src file for other file)
+click NEXT
+3. then in class path add the jar and in modulePath(auto)
+4. finish
+
+If the project is not visible then 
+Windows ->  show views -> project explorler/ Package exploer
+
+If it is not showing then it is already oepn behind the other screen close the screen(terminal) the project will be visilbe.
+*************************************************
+
+To connect 2 or more JVM then use RMI 
+Lang -> Technology -> Framework 
+
+*************************************************
+CREATE The Package/class:
+1. right click on the Project name -> New ->  Package/Class ->NAme it
+(for class name decide weather it should be main class or not )
+
+*************************************************
+If Package Not Found: 
+if Package is not aviable then check the package in the JRE System-Libries JDK22 and search the package.
+if package is aviable then add it in the modue-info.java and add the package name:
+Code: requires package name:
+eg: requires java.sql;		
+
+*************************************************
+Run the File: ctrl + F11
+
+*************************************************
+to download any jar file from : Maven 
+Link: https://mvnrepository.com/
+*************************************************
+to start the Spring add these jar files:
+1. Spring core
+2. Apache Commons Logging
+3. spring beans
+4. spring context
+5. spring context support
+6.Spring Expression Language
